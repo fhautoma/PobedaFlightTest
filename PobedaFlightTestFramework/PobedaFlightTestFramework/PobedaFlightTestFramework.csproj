@@ -20,10 +20,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Hooks\" />
     <Folder Include="Utilities\" />
     <Folder Include="TestData\" />
-    <Folder Include="PageObjects\" />
   </ItemGroup>
 
 </Project>

@@ -203,6 +203,12 @@ namespace PobedaFlightTestFramework.Features
 #line 25
    testRunner.And("En la seccion de pasajeros elegir 3 adultos y 1 niño", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
+#line 26
+   testRunner.And("Hacer click en el boton de busqueda", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 27
+   testRunner.And("Esperar que se muestre la pagina de seleccion de vuelos", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
             }
             this.ScenarioCleanup();
         }

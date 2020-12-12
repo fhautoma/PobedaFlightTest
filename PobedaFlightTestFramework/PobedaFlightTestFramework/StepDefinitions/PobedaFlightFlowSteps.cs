@@ -1,15 +1,20 @@
 ﻿using System;
 using TechTalk.SpecFlow;
+using PobedaFlightTestFramework.PageObjects;
 
 namespace PobedaFlightTestFramework.StepDefinitions
 {
     [Binding]
     public class PobedaFlightFlowSteps
     {
+
+        FlightSearchPage flightSearchPage = new FlightSearchPage();
+
+
         [Given(@"Navegar al sitio web de la aerolínea Pobeda")]
         public void GivenNavegarAlSitioWebDeLaAerolineaPobeda()
         {
-            //ScenarioContext.Current.Pending();
+            flightSearchPage.NavigateToWebSite();
         }
         
         [Given(@"Esperar que cargue la pagina de busqueda")]
@@ -39,7 +44,7 @@ namespace PobedaFlightTestFramework.StepDefinitions
         [Then(@"Hacer click en el boton de busqueda")]
         public void ThenHacerClickEnElBotonDeBusqueda()
         {
-            ScenarioContext.Current.Pending();
+            flightSearchPage.ClickSearchButton();
         }
 
         [Then(@"Esperar que se muestre la pagina de seleccion de vuelos")]

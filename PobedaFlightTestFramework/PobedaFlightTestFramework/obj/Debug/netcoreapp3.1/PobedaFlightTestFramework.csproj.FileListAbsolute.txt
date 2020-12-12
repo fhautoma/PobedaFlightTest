@@ -104,3 +104,4 @@ C:\Users\user\source\repos\fhautoma\PobedaFlightTest\PobedaFlightTestFramework\P
 C:\Users\user\source\repos\fhautoma\PobedaFlightTest\PobedaFlightTestFramework\PobedaFlightTestFramework\obj\Debug\netcoreapp3.1\PobedaFlightTestFramework.dll
 C:\Users\user\source\repos\fhautoma\PobedaFlightTest\PobedaFlightTestFramework\PobedaFlightTestFramework\obj\Debug\netcoreapp3.1\PobedaFlightTestFramework.pdb
 C:\Users\user\source\repos\fhautoma\PobedaFlightTest\PobedaFlightTestFramework\PobedaFlightTestFramework\obj\Debug\netcoreapp3.1\PobedaFlightTestFramework.genruntimeconfig.cache
+C:\Users\user\source\repos\fhautoma\PobedaFlightTest\PobedaFlightTestFramework\PobedaFlightTestFramework\obj\Debug\netcoreapp3.1\PobedaFlightTestFramework.csprojAssemblyReference.cache
