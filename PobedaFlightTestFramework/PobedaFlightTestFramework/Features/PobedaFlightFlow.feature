@@ -7,6 +7,7 @@
 			Given Navegar al sitio web de la aerolínea Pobeda
 			And Esperar que cargue la pagina de busqueda
 
+
 	Scenario: Acceso a url automatizada
 
 		Then La pagina de busqueda carga correctamente
