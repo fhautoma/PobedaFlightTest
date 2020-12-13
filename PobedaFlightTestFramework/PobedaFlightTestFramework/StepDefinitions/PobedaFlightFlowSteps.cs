@@ -9,7 +9,7 @@ namespace PobedaFlightTestFramework.StepDefinitions
     {
 
         FlightSearchPage flightSearchPage = new FlightSearchPage();
-
+        FlightResultPage flightResultPage = new FlightResultPage();
 
         [Given(@"Navegar al sitio web de la aerolínea Pobeda")]
         public void GivenNavegarAlSitioWebDeLaAerolineaPobeda()
@@ -30,15 +30,15 @@ namespace PobedaFlightTestFramework.StepDefinitions
         }
 
         [Then(@"Cambiar el lenguaje del sitio Web a ""(.*)""")]
-        public void ThenCambiarElLenguajeDelSitioWebA(string p0)
+        public void ThenCambiarElLenguajeDelSitioWebA(string language)
         {
-            
+            flightSearchPage.ChangeLanguageOption(language);
         }
 
         [Then(@"Cambiar el tipo de moneda del sitio Web a ""(.*)""")]
-        public void ThenCambiarElTipoDeMonedaDelSitioWebA(string p0)
+        public void ThenCambiarElTipoDeMonedaDelSitioWebA(string currency)
         {
-            
+            flightSearchPage.ChangeCurrencyOption(currency);
         }
 
         [Then(@"Hacer click en el boton de busqueda")]
@@ -50,7 +50,8 @@ namespace PobedaFlightTestFramework.StepDefinitions
         [Then(@"Esperar que se muestre la pagina de seleccion de vuelos")]
         public void ThenEsperarQueSeMuestreLaPaginaDeSeleccionDeVuelos()
         {
-            flightSearchPage.WaitUntilPageResultLoad();
+            flightResultPage.BookingCurrencyChangeisPresent();
+            flightResultPage.WaitUntilResulPagetLoad();
         }
 
         [Then(@"Regresar a la pagina de busqueda")]

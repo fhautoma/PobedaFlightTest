@@ -14,8 +14,8 @@
 
 
 	Scenario: Interacción con página de Búsqueda
-		Then Cambiar el lenguaje del sitio Web a "DE"
-			And Cambiar el tipo de moneda del sitio Web a "EUR"
+		Then Cambiar el lenguaje del sitio Web a "Aleman"
+			And Cambiar el tipo de moneda del sitio Web a "Euros"
 			And Hacer click en el boton de busqueda
 		Then Esperar que se muestre la pagina de seleccion de vuelos
 			And Regresar a la pagina de busqueda

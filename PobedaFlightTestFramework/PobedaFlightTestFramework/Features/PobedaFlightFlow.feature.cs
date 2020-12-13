@@ -174,10 +174,10 @@ namespace PobedaFlightTestFramework.Features
  this.FeatureBackground();
 #line hidden
 #line 17
-  testRunner.Then("Cambiar el lenguaje del sitio Web a \"DE\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+  testRunner.Then("Cambiar el lenguaje del sitio Web a \"Aleman\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 18
-   testRunner.And("Cambiar el tipo de moneda del sitio Web a \"EUR\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+   testRunner.And("Cambiar el tipo de moneda del sitio Web a \"Euros\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 19
    testRunner.And("Hacer click en el boton de busqueda", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
