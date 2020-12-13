@@ -11,6 +11,14 @@ namespace PobedaFlightTestFramework.PageObjects
 {
     class FlightResultPage
     {
+        //public string language;
+        //public string CurrencySelected { 
+        //    get { return language; } 
+        //    set { language = value; }
+
+        //}
+        public string CurrencySelected { get; set; }
+
         IWebDriver driver;
         public FlightResultPage()
         {
@@ -18,36 +26,30 @@ namespace PobedaFlightTestFramework.PageObjects
         }
 
         IJavaScriptExecutor javaScriptExecutor = (IJavaScriptExecutor)Hook.driver;
+        //IWebElement modalContentClass => driver.FindElement(By.ClassName("modal-content"));
 
-        IWebElement modalContentClass => driver.FindElement(By.ClassName("modal-content"));
-
-        IWebElement bookingCurrencyChangeAgreeButton
-            => driver.FindElement(By.XPath("/html/body/ngb-modal-window/div/div/ng-component/div/div[3]/button"));
+        //IWebElement bookingCurrencyChangeAgreeButton
+        //    => driver.FindElement(By.XPath("/html/body/ngb-modal-window/div/div/ng-component/div/div[3]/button"));
 
         public bool BookingCurrencyChangeisPresent()
         {
-            try
+            if (CurrencySelected != "EUR (€)")
             {
+
+                IWebElement modalContentClass = driver.FindElement(By.ClassName("modal-content"));
+                IWebElement bookingCurrencyChangeAgreeButton
+                    = driver.FindElement(By.XPath("/html/body/ngb-modal-window/div/div/ng-component/div/div[3]/button"));
+
                 bool isElementDisplayed = modalContentClass.Displayed;
+
                 if (isElementDisplayed)
                 {
                     bookingCurrencyChangeAgreeButton.Click();
                 }
-                else
-                {
-                    isElementDisplayed = false;
-                }
-
-                return isElementDisplayed;
-
-            } catch (NoSuchElementException e)
-
-            {
-                throw new NoSuchElementException($"elemento no existe: {e}");
             }
-           
+            return true;
 
-        }   
+        }
 
         public void WaitUntilResulPagetLoad()
         {

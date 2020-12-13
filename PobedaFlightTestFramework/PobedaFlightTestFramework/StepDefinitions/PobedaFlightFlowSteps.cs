@@ -11,6 +11,11 @@ namespace PobedaFlightTestFramework.StepDefinitions
         FlightSearchPage flightSearchPage = new FlightSearchPage();
         FlightResultPage flightResultPage = new FlightResultPage();
 
+        public PobedaFlightFlowSteps()
+        {
+            Console.WriteLine("a");
+        }
+
         [Given(@"Navegar al sitio web de la aerolínea Pobeda")]
         public void GivenNavegarAlSitioWebDeLaAerolineaPobeda()
         {
@@ -38,19 +43,20 @@ namespace PobedaFlightTestFramework.StepDefinitions
         [Then(@"Cambiar el tipo de moneda del sitio Web a ""(.*)""")]
         public void ThenCambiarElTipoDeMonedaDelSitioWebA(string currency)
         {
-            flightSearchPage.ChangeCurrencyOption(currency);
+            flightSearchPage.ChangeCurrencyOption(flightResultPage, currency);
         }
 
         [Then(@"Hacer click en el boton de busqueda")]
         public void ThenHacerClickEnElBotonDeBusqueda()
         {
             flightSearchPage.ClickSearchButton();
+            flightResultPage.BookingCurrencyChangeisPresent();
         }
 
         [Then(@"Esperar que se muestre la pagina de seleccion de vuelos")]
         public void ThenEsperarQueSeMuestreLaPaginaDeSeleccionDeVuelos()
         {
-            flightResultPage.BookingCurrencyChangeisPresent();
+            
             flightResultPage.WaitUntilResulPagetLoad();
         }
 

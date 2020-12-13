@@ -18,6 +18,7 @@ namespace PobedaFlightTestFramework.PageObjects
             this.driver = Hook.driver;
         }
 
+        //FlightResultPage flightResultPage = new FlightResultPage();
 
         IJavaScriptExecutor javaScriptExecutor = (IJavaScriptExecutor)Hook.driver;
        //panelItemContentClas = By.ClassName("multiple-panel_item_content ng-tns-c1-1 ng-trigger ng-trigger-collapse active ng-star-inserted");
@@ -99,7 +100,7 @@ namespace PobedaFlightTestFramework.PageObjects
 
         }
 
-        public void ChangeCurrencyOption(string currency)
+        public void ChangeCurrencyOption(FlightResultPage flightResultP, string currency)
         {
             string _currency = TranslateCurrency(currency);
             currencySelector.Click();
@@ -111,9 +112,12 @@ namespace PobedaFlightTestFramework.PageObjects
                 if (currencyDropDownItemOption.Text == _currency)
                 {
                     currencyDropDownItemOption.Click();
+                    flightResultP.CurrencySelected = _currency;
+                   
                     break;
                 }
             }
+            
             //IList<IWebElement> el_count = driver.FindElements(By.XPath("/html/body/div[1]/div[1]/ibe-main-menu/header/div/div[2]/div[2]/header-secondary-nav-custom/nav/ul/li[3]/ibe-language-selector/div/ibe-select/div/div[2]/ul/li"));
             //var  = driver.FindElements(By.CssSelector("#idLanguageSelector > div > span"));
 
@@ -179,6 +183,26 @@ namespace PobedaFlightTestFramework.PageObjects
             return _currency;
 
         }
+
+        //public string BookingCurrencyChangeisPresent(string currencySelected)
+        //{
+        //    if (currencySelected != "EUR (€)")
+        //    {
+
+        //        IWebElement modalContentClass = driver.FindElement(By.ClassName("modal-content"));
+        //        IWebElement bookingCurrencyChangeAgreeButton
+        //            = driver.FindElement(By.XPath("/html/body/ngb-modal-window/div/div/ng-component/div/div[3]/button"));
+
+        //        bool isElementDisplayed = modalContentClass.Displayed;
+
+        //        if (isElementDisplayed)
+        //        {
+        //            bookingCurrencyChangeAgreeButton.Click();
+        //        }
+        //    }
+        //    return null;
+
+        //}
 
     }
 }
