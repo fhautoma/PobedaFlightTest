@@ -27,4 +27,8 @@
 			And En la seccion de pasajeros elegir 3 adulto(s), 0 adolecente(s), 1 niño(s) y 0 bebe(s)
 			And Hacer click en el boton de busqueda
 			And Esperar que se muestre la pagina de seleccion de vuelos
+	
+	Scenario: Interacción con la Selección de Vuelos
 		
+		Then Hacer click en el boton de busqueda
+			And Esperar que se muestre la pagina de seleccion de vuelos
