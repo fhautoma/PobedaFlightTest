@@ -29,6 +29,17 @@
 			And Esperar que se muestre la pagina de seleccion de vuelos
 	
 	Scenario: Interacción con la Selección de Vuelos
-		
-		Then Hacer click en el boton de busqueda
+		Then Cambiar el tipo de moneda del sitio Web a "Euros"
+			And Cambiar el tipo de vuelo a Solo Ida
+			And Hacer click en el boton de busqueda
 			And Esperar que se muestre la pagina de seleccion de vuelos
+			And Validar disponibilidad de de vuelos y seleccionar tarifa
+
+	Scenario: Interacción con la Selección de Vuelos Sin Resultados
+		Then Cambiar el tipo de moneda del sitio Web a "Euros"
+			And Cambiar el tipo de vuelo a Solo Ida
+			And Seleccionar ciudad de origen con iata "VKO"
+			And Seleccionar ciudad de destino con iata "GZP"
+			And Hacer click en el boton de busqueda
+			And Esperar que se muestre la pagina de seleccion de vuelos
+			And Validar disponibilidad de de vuelos y seleccionar tarifa

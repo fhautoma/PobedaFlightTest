@@ -1,6 +1,7 @@
 ﻿using System;
 using TechTalk.SpecFlow;
 using PobedaFlightTestFramework.PageObjects;
+using System.Threading;
 
 namespace PobedaFlightTestFramework.StepDefinitions
 {
@@ -96,5 +97,15 @@ namespace PobedaFlightTestFramework.StepDefinitions
         {
             flightSearchPage.AddPassengers(adults, teens, childs, babys);
         }
+
+        [Then(@"Validar disponibilidad de de vuelos y seleccionar tarifa")]
+        public void ThenValidarDias()
+        {
+            flightResultPage.ValidateTripAvailabilityAndSelectFre();
+            Thread.Sleep(5000);
+        }
+
+
+
     }
 }
