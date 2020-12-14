@@ -15,15 +15,16 @@
 
 	Scenario: Interacción con página de Búsqueda
 		Then Cambiar el lenguaje del sitio Web a "Aleman"
-			And Cambiar el tipo de moneda del sitio Web a "Euros"
+			And Cambiar el tipo de moneda del sitio Web a "Dolares"
 			And Hacer click en el boton de busqueda
 		Then Esperar que se muestre la pagina de seleccion de vuelos
 			And Regresar a la pagina de busqueda
 			And Esperar que cargue la pagina de busqueda
 			And Cambiar el tipo de vuelo a Solo Ida
-			And Cambiar el lugar origen
-			And Cambiar el lugar destino
-			And En la seccion de pasajeros elegir 3 adultos y 1 niño
+			And Seleccionar ciudad de origen con iata "AAQ"
+			And Seleccionar ciudad de destino con iata "VKO"
+			And Cambiar Fecha de Vuelo
+			And En la seccion de pasajeros elegir 3 adulto(s), 0 adolecente(s), 1 niño(s) y 0 bebe(s)
 			And Hacer click en el boton de busqueda
 			And Esperar que se muestre la pagina de seleccion de vuelos
 		

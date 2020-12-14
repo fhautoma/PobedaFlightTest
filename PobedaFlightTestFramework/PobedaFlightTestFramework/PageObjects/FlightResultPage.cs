@@ -11,12 +11,6 @@ namespace PobedaFlightTestFramework.PageObjects
 {
     class FlightResultPage
     {
-        //public string language;
-        //public string CurrencySelected { 
-        //    get { return language; } 
-        //    set { language = value; }
-
-        //}
         public string CurrencySelected { get; set; }
 
         IWebDriver driver;
@@ -26,17 +20,19 @@ namespace PobedaFlightTestFramework.PageObjects
         }
 
         IJavaScriptExecutor javaScriptExecutor = (IJavaScriptExecutor)Hook.driver;
-        //IWebElement modalContentClass => driver.FindElement(By.ClassName("modal-content"));
+        IWebElement headerLogo => driver.FindElement(By.ClassName("header_logo"));
 
-        //IWebElement bookingCurrencyChangeAgreeButton
-        //    => driver.FindElement(By.XPath("/html/body/ngb-modal-window/div/div/ng-component/div/div[3]/button"));
-
+        
         public bool BookingCurrencyChangeisPresent()
         {
             if (CurrencySelected != "EUR (€)")
             {
 
+                WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(60));
+
                 IWebElement modalContentClass = driver.FindElement(By.ClassName("modal-content"));
+                
+                wait.Until(ExpectedConditions.ElementToBeClickable(driver.FindElement(By.XPath("/html/body/ngb-modal-window/div/div/ng-component/div/div[3]/button"))));
                 IWebElement bookingCurrencyChangeAgreeButton
                     = driver.FindElement(By.XPath("/html/body/ngb-modal-window/div/div/ng-component/div/div[3]/button"));
 
@@ -46,6 +42,8 @@ namespace PobedaFlightTestFramework.PageObjects
                 {
                     bookingCurrencyChangeAgreeButton.Click();
                 }
+
+                CurrencySelected = "EUR (€)";
             }
             return true;
 
@@ -56,6 +54,11 @@ namespace PobedaFlightTestFramework.PageObjects
             WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(60));
             wait.Until(ExpectedConditions.PresenceOfAllElementsLocatedBy(By.ClassName("content-wrap")));
             
+        }
+
+        public void ReturnToSearchPage()
+        {
+            headerLogo.Click();
         }
 
 

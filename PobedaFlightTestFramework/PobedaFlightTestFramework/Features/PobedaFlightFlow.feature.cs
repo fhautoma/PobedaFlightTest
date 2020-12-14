@@ -177,7 +177,7 @@ namespace PobedaFlightTestFramework.Features
   testRunner.Then("Cambiar el lenguaje del sitio Web a \"Aleman\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 18
-   testRunner.And("Cambiar el tipo de moneda del sitio Web a \"Euros\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+   testRunner.And("Cambiar el tipo de moneda del sitio Web a \"Dolares\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 19
    testRunner.And("Hacer click en el boton de busqueda", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -195,18 +195,22 @@ namespace PobedaFlightTestFramework.Features
    testRunner.And("Cambiar el tipo de vuelo a Solo Ida", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 24
-   testRunner.And("Cambiar el lugar origen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+   testRunner.And("Seleccionar ciudad de origen con iata \"AAQ\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 25
-   testRunner.And("Cambiar el lugar destino", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+   testRunner.And("Seleccionar ciudad de destino con iata \"VKO\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 26
-   testRunner.And("En la seccion de pasajeros elegir 3 adultos y 1 niño", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+   testRunner.And("Cambiar Fecha de Vuelo", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 27
-   testRunner.And("Hacer click en el boton de busqueda", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+   testRunner.And("En la seccion de pasajeros elegir 3 adulto(s), 0 adolecente(s), 1 niño(s) y 0 beb" +
+                        "e(s)", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 28
+   testRunner.And("Hacer click en el boton de busqueda", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 29
    testRunner.And("Esperar que se muestre la pagina de seleccion de vuelos", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }

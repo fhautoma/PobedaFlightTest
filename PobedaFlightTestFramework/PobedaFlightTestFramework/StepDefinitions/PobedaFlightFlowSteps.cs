@@ -11,11 +11,6 @@ namespace PobedaFlightTestFramework.StepDefinitions
         FlightSearchPage flightSearchPage = new FlightSearchPage();
         FlightResultPage flightResultPage = new FlightResultPage();
 
-        public PobedaFlightFlowSteps()
-        {
-            Console.WriteLine("a");
-        }
-
         [Given(@"Navegar al sitio web de la aerolínea Pobeda")]
         public void GivenNavegarAlSitioWebDeLaAerolineaPobeda()
         {
@@ -63,39 +58,43 @@ namespace PobedaFlightTestFramework.StepDefinitions
         [Then(@"Regresar a la pagina de busqueda")]
         public void ThenRegresarALaPaginaDeBusqueda()
         {
-            
+            flightResultPage.ReturnToSearchPage();
         }
 
         [Then(@"Esperar que cargue la pagina de busqueda")]
         public void ThenEsperarQueCargueLaPaginaDeBusqueda()
         {
-            
+            flightSearchPage.WaitUntilSearchPageLoad();
         }
 
         [Then(@"Cambiar el tipo de vuelo a Solo Ida")]
         public void ThenCambiarElTipoDeVueloASoloIda()
         {
-            
+            flightSearchPage.SelectOneWayTripOption();
         }
 
-        [Then(@"Cambiar el lugar origen")]
-        public void ThenCambiarElLugarOrigen()
+        [Then(@"Seleccionar ciudad de origen con iata ""(.*)""")]
+        public void ThenSeleccionarCiudadDeOrigenConIata(string iataCode)
         {
-           
+            flightSearchPage.FillDepartingCity(iataCode);
         }
 
-        [Then(@"Cambiar el lugar destino")]
-        public void ThenCambiarElLugarDestino()
+        [Then(@"Seleccionar ciudad de destino con iata ""(.*)""")]
+        public void ThenSeleccionarCiudadDeDestinoConIata(string iataCode)
         {
-            
+            flightSearchPage.FillArrivalCity(iataCode);
         }
 
-        [Then(@"En la seccion de pasajeros elegir (.*) adultos y (.*) niño")]
-        public void ThenEnLaSeccionDePasajerosElegirAdultosYNino(int p0, int p1)
+        [Then(@"Cambiar Fecha de Vuelo")]
+        public void ThenCambiarFechaDeVuelo()
         {
-            
+            flightSearchPage.ChangeTripDate();
         }
 
-
+        [Then(@"En la seccion de pasajeros elegir (.*) adulto\(s\), (.*) adolecente\(s\), (.*) niño\(s\) y (.*) bebe\(s\)")]
+        public void ThenEnLaSeccionDePasajerosElegirAdultoSAdolecenteSNinoSYBebeS(int adults, int teens, int childs, int babys)
+        {
+            flightSearchPage.AddPassengers(adults, teens, childs, babys);
+        }
     }
 }
