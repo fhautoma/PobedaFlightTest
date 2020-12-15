@@ -46,9 +46,9 @@ namespace PobedaFlightTestFramework.PageObjects
             this.driver = Hook.driver;
         }
 
-        public void NavigateToWebSite()
+        public void NavigateToWebSite(string url)
         {
-            driver.Navigate().GoToUrl("https://www.pobeda.aero/en");
+            driver.Navigate().GoToUrl(url);
         }
 
         public void ClickSearchButton()
@@ -63,9 +63,8 @@ namespace PobedaFlightTestFramework.PageObjects
 
         public void WaitUntilSearchPageLoad()
         {
+            Thread.Sleep(3000);
 
-            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(60));
-            wait.Until(ExpectedConditions.VisibilityOfAllElementsLocatedBy(By.ClassName("multiple-panel_item_content_inner")));
         }
         
         public void SearchPageLoadValidation()
@@ -88,6 +87,7 @@ namespace PobedaFlightTestFramework.PageObjects
             {
                 if (languageDropDownItemOption.Text == _language)
                 {
+                    wait.Until(ExpectedConditions.ElementToBeClickable(languageDropDownItemOption));
                     languageDropDownItemOption.Click();
                     break;
                 }

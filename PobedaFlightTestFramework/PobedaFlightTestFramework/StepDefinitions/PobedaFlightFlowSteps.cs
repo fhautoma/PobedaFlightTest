@@ -12,10 +12,10 @@ namespace PobedaFlightTestFramework.StepDefinitions
         FlightSearchPage flightSearchPage = new FlightSearchPage();
         FlightResultPage flightResultPage = new FlightResultPage();
 
-        [Given(@"Navegar al sitio web de la aerolínea Pobeda")]
-        public void GivenNavegarAlSitioWebDeLaAerolineaPobeda()
+        [Given(@"Navegar al sitio web ""(.*)""")]
+        public void GivenNavegarAlSitioWebDeLaAerolineaPobeda(string url)
         {
-            flightSearchPage.NavigateToWebSite();
+            flightSearchPage.NavigateToWebSite(url);
         }
         
         [Given(@"Esperar que cargue la pagina de busqueda")]

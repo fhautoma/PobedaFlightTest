@@ -97,7 +97,7 @@ namespace PobedaFlightTestFramework.Features
 #line 6
  #line hidden
 #line 7
-   testRunner.Given("Navegar al sitio web de la aerolínea Pobeda", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+   testRunner.Given("Navegar al sitio web \"https://www.pobeda.aero/en\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 8
    testRunner.And("Esperar que cargue la pagina de busqueda", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");

@@ -4,7 +4,7 @@
 	- Prueba de Interacción con la Selección de Vuelos
 
 	Background: 
-			Given Navegar al sitio web de la aerolínea Pobeda
+			Given Navegar al sitio web "https://www.pobeda.aero/en"
 			And Esperar que cargue la pagina de busqueda
 
 
