@@ -6,12 +6,15 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using PobedaFlightTestFramework.Hooks;
+using PobedaFlightTestFramework.Utilities;
 
 namespace PobedaFlightTestFramework.PageObjects
 {
     class FlightSearchPage
     {
         IWebDriver driver;
+
+        Waits waits = new Waits();
 
         public FlightSearchPage()
         {
