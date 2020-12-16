@@ -14,3 +14,4 @@ NuGet:
 - Selenium.WebDriver
 - Selenium.Support
 - Selenium.WebDriver.ChromeDriver
+- DotNetSeleniumExtras.WaitHelpers
