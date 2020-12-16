@@ -99,7 +99,7 @@ namespace PobedaFlightTestFramework.PageObjects
                         wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(selectFareButton));
                         selectFareButton.Click();
 
-                        i = 16;
+                         i = 16;
                     }
                     
                 }
