@@ -99,9 +99,10 @@ C:\Users\user\source\repos\fhautoma\PobedaFlightTest\PobedaFlightTestFramework\P
 C:\Users\user\source\repos\fhautoma\PobedaFlightTest\PobedaFlightTestFramework\PobedaFlightTestFramework\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\user\source\repos\fhautoma\PobedaFlightTest\PobedaFlightTestFramework\PobedaFlightTestFramework\obj\Debug\netcoreapp3.1\PobedaFlightTestFramework.AssemblyInfoInputs.cache
 C:\Users\user\source\repos\fhautoma\PobedaFlightTest\PobedaFlightTestFramework\PobedaFlightTestFramework\obj\Debug\netcoreapp3.1\PobedaFlightTestFramework.AssemblyInfo.cs
-C:\Users\user\source\repos\fhautoma\PobedaFlightTest\PobedaFlightTestFramework\PobedaFlightTestFramework\obj\Debug\netcoreapp3.1\PobedaFlightTestFramework.csproj.CoreCompileInputs.cache
 C:\Users\user\source\repos\fhautoma\PobedaFlightTest\PobedaFlightTestFramework\PobedaFlightTestFramework\obj\Debug\netcoreapp3.1\PobedaFlightTestFramework.csproj.CopyComplete
 C:\Users\user\source\repos\fhautoma\PobedaFlightTest\PobedaFlightTestFramework\PobedaFlightTestFramework\obj\Debug\netcoreapp3.1\PobedaFlightTestFramework.dll
 C:\Users\user\source\repos\fhautoma\PobedaFlightTest\PobedaFlightTestFramework\PobedaFlightTestFramework\obj\Debug\netcoreapp3.1\PobedaFlightTestFramework.pdb
 C:\Users\user\source\repos\fhautoma\PobedaFlightTest\PobedaFlightTestFramework\PobedaFlightTestFramework\obj\Debug\netcoreapp3.1\PobedaFlightTestFramework.genruntimeconfig.cache
 C:\Users\user\source\repos\fhautoma\PobedaFlightTest\PobedaFlightTestFramework\PobedaFlightTestFramework\obj\Debug\netcoreapp3.1\PobedaFlightTestFramework.csprojAssemblyReference.cache
+C:\Users\user\source\repos\fhautoma\PobedaFlightTest\PobedaFlightTestFramework\PobedaFlightTestFramework\bin\Debug\netcoreapp3.1\SeleniumExtras.WaitHelpers.dll
+C:\Users\user\source\repos\fhautoma\PobedaFlightTest\PobedaFlightTestFramework\PobedaFlightTestFramework\obj\Debug\netcoreapp3.1\PobedaFlightTestFramework.csproj.CoreCompileInputs.cache

@@ -13,6 +13,11 @@ namespace PobedaFlightTestFramework.PageObjects
     {
         IWebDriver driver;
 
+        public FlightSearchPage()
+        {
+            this.driver = Hook.driver;
+        }
+
         IJavaScriptExecutor javaScriptExecutor = (IJavaScriptExecutor)Hook.driver;
         IWebElement searchButton => driver.FindElement(By.Id("searchButton"));
         //IWebElement languageSelector => driver.FindElement(By.Id("idLanguageSelector"));
@@ -41,10 +46,6 @@ namespace PobedaFlightTestFramework.PageObjects
         IWebElement addBabysButton =>
             driver.FindElement(By.XPath("/html/body/div[1]/main/div/div[1]/div/div/ibe-multiple-panel/div/div/div[2]/div[1]/div/div/ibe-multiple-options/div/div/div/ibe-render-component/div/ng-template/search-container/ibe-search-custom/div/div[2]/div[2]/div[3]/pax-control-custom/div/div[2]/div/div[2]/div/ul/li[4]/div[2]/ibe-minus-plus/div/button[2]"));
         IWebElement donePassengersButton => driver.FindElement(By.XPath("//*[@id=\"paxControlSearchId\"]/div/div[2]/div/div/button"));
-        public FlightSearchPage()
-        {
-            this.driver = Hook.driver;
-        }
 
         public void NavigateToWebSite(string url)
         {
@@ -54,7 +55,7 @@ namespace PobedaFlightTestFramework.PageObjects
         public void ClickSearchButton()
         {
             WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(60));
-            wait.Until(ExpectedConditions.ElementToBeClickable(searchButton));
+            wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(searchButton));
 
             
             searchButton.Click();
@@ -78,16 +79,16 @@ namespace PobedaFlightTestFramework.PageObjects
             string _language = TranslateLanguage(language);
 
             WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(60));
-            wait.Until(ExpectedConditions.ElementToBeClickable(languageSelector));
+            wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(languageSelector));
             languageSelector.Click();
             
-            wait.Until(ExpectedConditions.ElementToBeClickable(languageDropDownItemOptionOne));
+            wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(languageDropDownItemOptionOne));
 
             foreach (IWebElement languageDropDownItemOption in languageDropDownItemOptionsCount)
             {
                 if (languageDropDownItemOption.Text == _language)
                 {
-                    wait.Until(ExpectedConditions.ElementToBeClickable(languageDropDownItemOption));
+                    wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(languageDropDownItemOption));
                     languageDropDownItemOption.Click();
                     break;
                 }
@@ -100,7 +101,7 @@ namespace PobedaFlightTestFramework.PageObjects
             string _currency = TranslateCurrency(currency);
             currencySelector.Click();
             WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(60));
-            wait.Until(ExpectedConditions.ElementToBeClickable(currencyDropDownItemOptionOne));
+            wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(currencyDropDownItemOptionOne));
 
             foreach (IWebElement currencyDropDownItemOption in currencyDropDownItemOptionsCount)
             {
@@ -178,7 +179,7 @@ namespace PobedaFlightTestFramework.PageObjects
 
             originStationInputLabel.Click();
             WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(60));
-            wait.Until(ExpectedConditions.ElementToBeClickable(originOptionOne));
+            wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(originOptionOne));
 
             foreach (IWebElement originListOption in stationControlListOrigin)
             {
@@ -212,14 +213,14 @@ namespace PobedaFlightTestFramework.PageObjects
         public void ChangeTripDate()
         {
             WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(60));
-            wait.Until(ExpectedConditions.ElementToBeClickable(tripDate));
+            wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(tripDate));
             tripDate.Click();
         }
 
         public void AddPassengers(int adults, int teens, int childs, int babys)
         {
             WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(60));
-            wait.Until(ExpectedConditions.ElementToBeClickable(addAdultsButton));
+            wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(addAdultsButton));
 
             for (int i = 1; i< adults; i++)
             {
@@ -238,7 +239,7 @@ namespace PobedaFlightTestFramework.PageObjects
                 addBabysButton.Click();
             }
 
-            wait.Until(ExpectedConditions.ElementToBeClickable(donePassengersButton));
+            wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(donePassengersButton));
             donePassengersButton.Click();
         }
 

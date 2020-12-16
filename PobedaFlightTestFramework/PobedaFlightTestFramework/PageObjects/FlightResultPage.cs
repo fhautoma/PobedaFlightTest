@@ -33,7 +33,7 @@ namespace PobedaFlightTestFramework.PageObjects
 
                 IWebElement modalContentClass = driver.FindElement(By.ClassName("modal-content"));
                 
-                wait.Until(ExpectedConditions.ElementToBeClickable(driver.FindElement(By.XPath("/html/body/ngb-modal-window/div/div/ng-component/div/div[3]/button"))));
+                wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(driver.FindElement(By.XPath("/html/body/ngb-modal-window/div/div/ng-component/div/div[3]/button"))));
                 IWebElement bookingCurrencyChangeAgreeButton
                     = driver.FindElement(By.XPath("/html/body/ngb-modal-window/div/div/ng-component/div/div[3]/button"));
 
@@ -53,7 +53,7 @@ namespace PobedaFlightTestFramework.PageObjects
         public void WaitUntilResulPagetLoad()
         {
             WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(60));
-            wait.Until(ExpectedConditions.PresenceOfAllElementsLocatedBy(By.ClassName("content-wrap")));
+            wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.PresenceOfAllElementsLocatedBy(By.ClassName("content-wrap")));
             
         }
 
@@ -78,7 +78,7 @@ namespace PobedaFlightTestFramework.PageObjects
                     IWebElement selectFareButton = driver.FindElement(By.XPath("/html/body/div[1]/main/div/div[2]/div/div/journey-availability-select-container/div[2]/price-journey-select-custom/div[2]/div/div/journey-control-custom/div/div/div[2]/div[1]/div/div[1]/fare-control/div/div[3]/button/div[2]"));
                     
                     WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(60));
-                    wait.Until(ExpectedConditions.ElementToBeClickable(selectFareButton));
+                    wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(selectFareButton));
 
                     selectFareButton.Click();
 
@@ -92,11 +92,11 @@ namespace PobedaFlightTestFramework.PageObjects
                         WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(60));
 
                         IWebElement selectFareLink = driver.FindElement(By.XPath("/html/body/div[1]/main/div/div[2]/div/div/journey-availability-select-container/div[2]/price-journey-select-custom/div[2]/div/div/journey-control-custom/div/div/div[1]/div[2]/button/div[2]/div"));
-                        wait.Until(ExpectedConditions.ElementToBeClickable(selectFareLink));
+                        wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(selectFareLink));
                         selectFareLink.Click();
 
                         IWebElement selectFareButton = driver.FindElement(By.XPath("/html/body/div[1]/main/div/div[2]/div/div/journey-availability-select-container/div[2]/price-journey-select-custom/div[2]/div/div/journey-control-custom/div/div/div[2]/div[1]/div/div[1]/fare-control/div/div[3]/button/div[2]"));
-                        wait.Until(ExpectedConditions.ElementToBeClickable(selectFareButton));
+                        wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(selectFareButton));
                         selectFareButton.Click();
 
                         i = 16;
