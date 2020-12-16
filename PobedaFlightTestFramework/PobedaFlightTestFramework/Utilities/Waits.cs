@@ -19,7 +19,8 @@ namespace PobedaFlightTestFramework.Utilities
             if (fluentWait.Until(x => element.Displayed)) 
             {
                 return element;
-            } else
+            } 
+            else
             {
                 return null;
             }
