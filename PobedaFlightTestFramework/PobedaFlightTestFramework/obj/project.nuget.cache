@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "rr2fcWLA7XcD9QHGSt0k8Qf83laqm9+kfx8wf+lqs0mkILh24OkpaFMV1Hr6BGTpsQoIZ1XSsTRpW676v2oNdw==",
+  "dgSpecHash": "I+2XypflLYUIPY/vRSLMUpyfOzdzBLoupfOKag/qKxze0i0PCKxTsFiBxjE8v5e47XZt9SINCZ1FEWBIZ8SRrg==",
   "success": true,
   "projectFilePath": "C:\\Users\\user\\source\\repos\\fhautoma\\PobedaFlightTest\\PobedaFlightTestFramework\\PobedaFlightTestFramework\\PobedaFlightTestFramework.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user\\.nuget\\packages\\bodi\\1.4.1\\bodi.1.4.1.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\coverlet.collector\\1.2.0\\coverlet.collector.1.2.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\cucumber.messages\\6.0.1\\cucumber.messages.6.0.1.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\dotnetseleniumextras.waithelpers\\3.11.0\\dotnetseleniumextras.waithelpers.3.11.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\gherkin\\6.0.0\\gherkin.6.0.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\google.protobuf\\3.7.0\\google.protobuf.3.7.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.codecoverage\\16.5.0\\microsoft.codecoverage.16.5.0.nupkg.sha512",
