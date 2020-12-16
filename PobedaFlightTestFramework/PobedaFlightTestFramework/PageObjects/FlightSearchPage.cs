@@ -231,7 +231,7 @@ namespace PobedaFlightTestFramework.PageObjects
             }
             for (int i = 0; i < childs; i++)
             {
-                addChildsButton.Click();
+                 addChildsButton.Click();
             }
             for (int i = 0; i < babys; i++)
             {
